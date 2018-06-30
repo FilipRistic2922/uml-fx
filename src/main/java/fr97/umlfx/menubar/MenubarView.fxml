@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<MenuBar xmlns="http://javafx.com/javafx/8.0.66" xmlns:fx="http://javafx.com/fxml/1"
+         fx:controller="fr97.umlfx.menubar.MenubarController">
+
+    <fx:define>
+        <ToggleGroup fx:id="toggleLanguage"/>
+        <ToggleGroup fx:id="toggleTheme"/>
+    </fx:define>
+
+    <menus>
+        <Menu fx:id="menuFile" mnemonicParsing="false" text="File">
+            <items>
+                <MenuItem fx:id="itemNewDiagram" mnemonicParsing="false" onAction="#createNewDiagram"
+                          text="New Diagram"/>
+                <MenuItem fx:id="itemLoadDiagram" mnemonicParsing="false" text="Load Diagram"/>
+                <MenuItem fx:id="itemSaveDiagram" mnemonicParsing="false" text="Save Diagram"/>
+                <SeparatorMenuItem mnemonicParsing="false"/>
+                <MenuItem fx:id="itemExit" mnemonicParsing="false" onAction="#close" text="Exit"/>
+            </items>
+        </Menu>
+        <Menu mnemonicParsing="false" text="Edit">
+            <items>
+                <MenuItem fx:id="itemUndo" mnemonicParsing="false" text="Undo" onAction="#undo"/>
+                <MenuItem fx:id="itemRedo" mnemonicParsing="false" text="Redo" onAction="#redo"/>
+            </items>
+        </Menu>
+        <Menu fx:id="menuSettings" mnemonicParsing="false" text="Settings">
+            <items>
+                <Menu fx:id="menuLang" mnemonicParsing="false" text="Language">
+                    <items>
+                        <RadioMenuItem fx:id="itemEn" mnemonicParsing="false" selected="true" userData="0"
+                                       text="English" toggleGroup="$toggleLanguage"/>
+                        <RadioMenuItem fx:id="itemSr" mnemonicParsing="false" userData="1" text="Serbian"
+                                       toggleGroup="$toggleLanguage"/>
+                    </items>
+                </Menu>
+                <Menu fx:id="menuTheme" mnemonicParsing="false" text="Theme">
+                    <items>
+                        <RadioMenuItem fx:id="itemLight" mnemonicParsing="false" selected="true" userData="light"
+                                       text="Light Theme" toggleGroup="$toggleTheme"/>
+                        <RadioMenuItem fx:id="itemDark" mnemonicParsing="false" userData="dark" text="Dark Theme"
+                                       toggleGroup="$toggleTheme"/>
+                    </items>
+                </Menu>
+            </items>
+        </Menu>
+        <Menu fx:id="menuHelp" mnemonicParsing="false" text="Help">
+            <items>
+                <MenuItem mnemonicParsing="false" text="Action 1"/>
+            </items>
+        </Menu>
+    </menus>
+</MenuBar>

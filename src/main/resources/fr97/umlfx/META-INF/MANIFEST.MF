@@ -1,0 +1,6 @@
+Manifest-Version: 1.0
+Archiver-Version: Plexus Archiver
+Built-By: Filip
+Created-By: Apache Maven 3.3.9
+Main-Class: fr97.umlfx.app.App
+Build-Jdk: 1.8.0_112
