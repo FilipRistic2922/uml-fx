@@ -35,6 +35,7 @@ class ClassDiagramTest {
             assertEquals(node, result.get(), "nodes are not the same");
         } else {
             fail("diagram didn't find node even though it was there");
+
         }
     }
 
